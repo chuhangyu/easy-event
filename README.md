@@ -1,0 +1,2 @@
+# easy-event
+event emitter
