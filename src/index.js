@@ -3,9 +3,9 @@ class Event {
     this.handlers = {};
   }
 
-  emit(msg) {
+  emit(msg, params) {
     if (this.handlers[msg] && this.handlers[msg].length > 0) {
-      this.handlers[msg].forEach(cb => cb());
+      this.handlers[msg].forEach(cb => cb(params));
     }
   }
 
